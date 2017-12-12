@@ -11,6 +11,7 @@ namespace DungeonCrusher
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Player player1 = new Player("player1");
 
         public DungeonCrusher()
         {
