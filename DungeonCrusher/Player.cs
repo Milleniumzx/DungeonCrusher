@@ -4,10 +4,11 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
 
 namespace DungeonCrusher
 {
-    class Player
+    public class Player
     {
         public string Name { get; set; }
         public int Level { get; set; }
@@ -35,7 +36,10 @@ namespace DungeonCrusher
 
         }
 
-
+        public void UpdatePosition(GameTime gameTime)
+        {
+            //Click-to-move or WASD logic here
+        }
 
 
         public int VitalityBonus() //set to public to allow UI to show how much you gain from Vitality

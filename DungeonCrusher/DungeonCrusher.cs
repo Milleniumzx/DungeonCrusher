@@ -11,7 +11,7 @@ namespace DungeonCrusher
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Player player1 = new Player("player1");
+        Player player1 = new Player("DGPlayer");
 
         public DungeonCrusher()
         {
@@ -28,6 +28,10 @@ namespace DungeonCrusher
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            this.graphics.PreferredBackBufferHeight = 1280; //initial debugging setup, everything needs to be scalable and support atleast 1080p
+            this.graphics.PreferredBackBufferWidth = 720;
+            this.IsFixedTimeStep = false; //allows for over 60fps - good for 144hz monitors.
+            this.IsMouseVisible = true; //Will be disabled when we start rendering our own cursor.
 
             base.Initialize();
         }
